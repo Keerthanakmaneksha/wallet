@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -22,6 +27,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 220px auto 500px;
+  
 }
 
 .App-link {
