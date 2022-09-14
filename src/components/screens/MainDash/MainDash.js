@@ -5,6 +5,8 @@ import Sun from "../../../assets/images/sun.svg"
 import Fire from "../../../assets/images/fire.svg"
 import Game from "../../../assets/images/game.svg"
 import Down from "../../../assets/images/down.svg"
+import Uparrow from "../../../assets/images/uparrow.svg"
+import Downarrow from "../../../assets/images/downarrow.svg"
 
 
 function MainDash() {
@@ -64,53 +66,59 @@ function MainDash() {
                 <TopContainer>
                     <Heading>Statistics</Heading>
                     <DateButton>
-                        <Date>march 2022</Date>
+                        march 2022
                         <ArrowIcon>
-                            <img src="" alt="" />
+                            <img src={Down} alt="" />
                         </ArrowIcon>
                     </DateButton>
                 </TopContainer>
-                <BottomContainer>
+                <BottomContainerStatic>
                     <StaticItem>
                         <Box>
-                            <ArrowIcon></ArrowIcon>
+                            <ArrowIconStatic>
+                                <img src={Uparrow} alt="" />
+                            </ArrowIconStatic>
                         </Box>
-                        <Incom>
-                            <Label></Label>
-                            <IncomAmount></IncomAmount>
-                        </Incom>
+                        <Income>
+                            <Label>Total income </Label>
+                            <IncomAmount>$235</IncomAmount>
+                        </Income>
                         <Change>
                             <Variation></Variation>
                         </Change>
-                        <Percentage></Percentage>
+                        <Percentage>+20%</Percentage>
                     </StaticItem>
                     <StaticItem>
                         <Box>
-                            <ArrowIcon></ArrowIcon>
+                            <ArrowIconStatic>
+                                <img src={Uparrow} alt="" />
+                            </ArrowIconStatic>
                         </Box>
-                        <Incom>
-                            <Label></Label>
-                            <IncomAmount></IncomAmount>
-                        </Incom>
+                        <Income>
+                            <Label>Total income </Label>
+                            <IncomAmount>$235</IncomAmount>
+                        </Income>
                         <Change>
                             <Variation></Variation>
                         </Change>
-                        <Percentage></Percentage>
+                        <Percentage>+8%</Percentage>
                     </StaticItem>
                     <StaticItem>
                         <Box>
-                            <ArrowIcon></ArrowIcon>
+                            <ArrowIconStatic>
+                                <img src={Downarrow} alt="" />
+                            </ArrowIconStatic>
                         </Box>
-                        <Incom>
-                            <Label></Label>
-                            <IncomAmount></IncomAmount>
-                        </Incom>
+                        <Income>
+                            <Label>Total income </Label>
+                            <IncomAmount>$235</IncomAmount>
+                        </Income>
                         <Change>
                             <Variation></Variation>
                         </Change>
-                        <Percentage></Percentage>
+                        <Percentage>-18%</Percentage>
                     </StaticItem>
-                </BottomContainer>
+                </BottomContainerStatic>
             </SatisticsContainer>
         </Statistics>
     </MainDashBoard>
@@ -214,6 +222,60 @@ const SavingsLabel = styled.div`
     color: #000;
     margin-left: 20px;
 `;
+const Statistics = styled.div`
+    width: 470px;
+    margin: 40px auto;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+`; 
+const SatisticsContainer = styled.div`
+    margin: 0 30px;
 
+`; 
+const DateButton = styled.button`
+    border-radius: 20px;
+    width: 114px;
+    height: 34px;
+    border: 1px solid #747474;
+    padding: 5px 12px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:20px;
+`; 
+const BottomContainerStatic = styled.div`
+    
+`;
+const ArrowIcon = styled.span`
+    width: 10px;
+    img {
+        display: block;
+        width: 10px;
+    }
+`; 
+const StaticItem = styled.div`
+    display: flex;
+    justify-content: space-between;
+`; 
+const Box = styled.div`
+    background: #000;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+`; 
+const ArrowIconStatic = styled.div`
+      width: 10px;
+    img {
+        display: block;
+        width: 10px;
+    }
+`;
+const Income = styled.div``; 
+const IncomAmount = styled.div``; 
+const Change = styled.div``; 
+const Variation = styled.div``; 
+const Percentage = styled.div``; 
 
 export default MainDash;
