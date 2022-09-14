@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
+import ReactDatePicker from 'react-datepicker';
 import Sun from "../../../assets/images/sun.svg"
 import Fire from "../../../assets/images/fire.svg"
 import Game from "../../../assets/images/game.svg"
+import Down from "../../../assets/images/down.svg"
 
 
 function MainDash() {
@@ -57,6 +59,60 @@ function MainDash() {
                 </BottomContainer>
             </SavingsContainer>
         </Savings>
+        <Statistics>
+            <SatisticsContainer>
+                <TopContainer>
+                    <Heading>Statistics</Heading>
+                    <DateButton>
+                        <Date>march 2022</Date>
+                        <ArrowIcon>
+                            <img src="" alt="" />
+                        </ArrowIcon>
+                    </DateButton>
+                </TopContainer>
+                <BottomContainer>
+                    <StaticItem>
+                        <Box>
+                            <ArrowIcon></ArrowIcon>
+                        </Box>
+                        <Incom>
+                            <Label></Label>
+                            <IncomAmount></IncomAmount>
+                        </Incom>
+                        <Change>
+                            <Variation></Variation>
+                        </Change>
+                        <Percentage></Percentage>
+                    </StaticItem>
+                    <StaticItem>
+                        <Box>
+                            <ArrowIcon></ArrowIcon>
+                        </Box>
+                        <Incom>
+                            <Label></Label>
+                            <IncomAmount></IncomAmount>
+                        </Incom>
+                        <Change>
+                            <Variation></Variation>
+                        </Change>
+                        <Percentage></Percentage>
+                    </StaticItem>
+                    <StaticItem>
+                        <Box>
+                            <ArrowIcon></ArrowIcon>
+                        </Box>
+                        <Incom>
+                            <Label></Label>
+                            <IncomAmount></IncomAmount>
+                        </Incom>
+                        <Change>
+                            <Variation></Variation>
+                        </Change>
+                        <Percentage></Percentage>
+                    </StaticItem>
+                </BottomContainer>
+            </SatisticsContainer>
+        </Statistics>
     </MainDashBoard>
     </>
     
@@ -91,17 +147,18 @@ const Amount = styled.h3`
     color: #eeeeee;
 `; 
 const Savings= styled.div`
-    width: 449px;
+    width: 470px;
     margin: 40px auto;
     box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
 `;
 const SavingsContainer = styled.div`
-
+    height: 190px;
 `;
 const TopContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-content: center;
+    margin: 0 30px;
 `;
 const Head = styled.h2`
     font-size: 20px;
@@ -125,8 +182,8 @@ const BottomContainer = styled.div`
     margin: 0 auto;
 `;
 const SavingsItem = styled.div`
-    width: 120px;
-    height: 135px;
+    width: 110px;
+    height: 115px;
     border-radius:5px;
     :nth-child(1n) {
         background: #FEC0A7;
