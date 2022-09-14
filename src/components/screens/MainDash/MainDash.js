@@ -1,5 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
+import Sun from "../../../assets/images/sun.svg"
+import Fire from "../../../assets/images/fire.svg"
+import Game from "../../../assets/images/game.svg"
+
 
 function MainDash() {
   return (
@@ -22,6 +26,37 @@ function MainDash() {
                 </CardItem>
             </CardContainer>
         </Card>
+        <Savings>
+            <SavingsContainer>
+                <TopContainer>
+                    <Head>Savings</Head>
+                    <CountLink>Total 5 Walets</CountLink>
+                </TopContainer>
+                <BottomContainer>
+                    <SavingsItem>
+                        <Icon>
+                            <img src={Sun} alt="" />
+                        </Icon>
+                        <SavingsAmount></SavingsAmount>
+                        <SavingsLabel></SavingsLabel>
+                    </SavingsItem>
+                    <SavingsItem>
+                        <Icon>
+                            <img src={Fire} alt="" />
+                        </Icon>
+                        <SavingsAmount></SavingsAmount>
+                        <SavingsLabel></SavingsLabel>
+                    </SavingsItem>
+                    <SavingsItem>
+                        <Icon>
+                            <img src={Game} alt="" />
+                        </Icon>
+                        <SavingsAmount></SavingsAmount>
+                        <SavingsLabel></SavingsLabel>
+                    </SavingsItem>
+                </BottomContainer>
+            </SavingsContainer>
+        </Savings>
     </MainDashBoard>
     </>
     
@@ -36,7 +71,7 @@ const Heading = styled.h1`
 const Card = styled.div``; 
 const CardContainer = styled.ul`
     background: #000;
-    width: 473px;
+    width: 410px;
     margin: 0 auto;
     display: flex;
     border: 1px solid #000;
@@ -52,9 +87,26 @@ const Label = styled.h5`
 `; 
 const Amount = styled.h3`
     font-weight: 700;
-    font-size: 28px;
+    font-size: 23px;
     color: #eeeeee;
 `; 
+const Savings= styled.div`
+    width: 410px;
+    
+`;
+const SavingsContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+`;
+const TopContainer = styled.div``;
+const Head = styled.div``;
+const CountLink = styled.div``;
+const BottomContainer = styled.div``;
+const SavingsItem = styled.div``;
+const Icon = styled.div``;
+const SavingsAmount = styled.div``;
+const SavingsLabel = styled.div``;
 
 
 export default MainDash;
