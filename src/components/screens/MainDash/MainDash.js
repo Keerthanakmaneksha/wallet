@@ -30,29 +30,29 @@ function MainDash() {
             <SavingsContainer>
                 <TopContainer>
                     <Head>Savings</Head>
-                    <CountLink>Total 5 Walets</CountLink>
+                    <CountLink to="/">Total 5 Walets</CountLink>
                 </TopContainer>
                 <BottomContainer>
                     <SavingsItem>
                         <Icon>
                             <img src={Sun} alt="" />
                         </Icon>
-                        <SavingsAmount></SavingsAmount>
-                        <SavingsLabel></SavingsLabel>
+                        <SavingsAmount>$2250</SavingsAmount>
+                        <SavingsLabel>Summer trip</SavingsLabel>
                     </SavingsItem>
                     <SavingsItem>
                         <Icon>
                             <img src={Fire} alt="" />
                         </Icon>
-                        <SavingsAmount></SavingsAmount>
-                        <SavingsLabel></SavingsLabel>
+                        <SavingsAmount>$2250</SavingsAmount>
+                        <SavingsLabel>Summer trip</SavingsLabel>
                     </SavingsItem>
                     <SavingsItem>
                         <Icon>
                             <img src={Game} alt="" />
                         </Icon>
-                        <SavingsAmount></SavingsAmount>
-                        <SavingsLabel></SavingsLabel>
+                        <SavingsAmount>$2250</SavingsAmount>
+                        <SavingsLabel>Summer trip</SavingsLabel>
                     </SavingsItem>
                 </BottomContainer>
             </SavingsContainer>
@@ -91,22 +91,72 @@ const Amount = styled.h3`
     color: #eeeeee;
 `; 
 const Savings= styled.div`
-    width: 410px;
-    
+    width: 449px;
+    margin: 40px auto;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
 `;
 const SavingsContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-content: space-between;
+
 `;
-const TopContainer = styled.div``;
-const Head = styled.div``;
-const CountLink = styled.div``;
-const BottomContainer = styled.div``;
-const SavingsItem = styled.div``;
-const Icon = styled.div``;
-const SavingsAmount = styled.div``;
-const SavingsLabel = styled.div``;
+const TopContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+`;
+const Head = styled.h2`
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+`;
+const CountLink = styled.span`
+    color: #747474;
+    font-size: 12px;
+    text-decoration: underline;
+    margin-top: 20px;
+    :hover {
+        cursor: pointer;
+    }
+`;
+const BottomContainer = styled.div`
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 400px;
+    margin: 0 auto;
+`;
+const SavingsItem = styled.div`
+    width: 120px;
+    height: 135px;
+    border-radius:5px;
+    :nth-child(1n) {
+        background: #FEC0A7;
+    }
+    :nth-child(2n) {
+        background: #98BDE5;  
+    }
+    :nth-child(3n) {
+        background: #98DBE5;
+    }
+`;
+const Icon = styled.div`
+    width: 28px;
+    margin: 20px 0px 20px 20px;
+    img {
+        display: block;
+        width: 100%;
+    }
+`;
+const SavingsAmount = styled.div`
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+    margin-left: 20px;
+`;
+const SavingsLabel = styled.div`
+    font-size: 11px; 
+    color: #000;
+    margin-left: 20px;
+`;
 
 
 export default MainDash;
