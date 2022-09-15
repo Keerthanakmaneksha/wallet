@@ -226,7 +226,7 @@ const SavingsLabel = styled.div`
 `;
 const Statistics = styled.div`
     width: 470px;
-    margin: 40px auto;
+    margin: -32px auto;
     box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
 `; 
 const SatisticsContainer = styled.div`
