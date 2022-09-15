@@ -64,7 +64,7 @@ function MainDash() {
         <Statistics>
             <SatisticsContainer>
                 <TopContainer>
-                    <Heading>Statistics</Heading>
+                    <HeadingStatic>Statistics</HeadingStatic>
                     <DateButton>
                         march 2022
                         <ArrowIcon>
@@ -80,7 +80,7 @@ function MainDash() {
                             </ArrowIconStatic>
                         </Box>
                         <Income>
-                            <Label>Total income </Label>
+                            <LabelStatic>Total income </LabelStatic>
                             <IncomAmount>$235</IncomAmount>
                         </Income>
                         <Change>
@@ -95,7 +95,7 @@ function MainDash() {
                             </ArrowIconStatic>
                         </Box>
                         <Income>
-                            <Label>Total income </Label>
+                            <LabelStatic>Total income </LabelStatic>
                             <IncomAmount>$235</IncomAmount>
                         </Income>
                         <Change>
@@ -110,7 +110,7 @@ function MainDash() {
                             </ArrowIconStatic>
                         </Box>
                         <Income>
-                            <Label>Total income </Label>
+                            <LabelStatic>Total income </LabelStatic>
                             <IncomAmount>$235</IncomAmount>
                         </Income>
                         <Change>
@@ -126,7 +126,9 @@ function MainDash() {
     
   )
 }
-const MainDashBoard = styled.div``; 
+const MainDashBoard = styled.div`
+    
+`; 
 const Heading = styled.h1`
     font-size: 28px;
     color:#000; 
@@ -231,6 +233,10 @@ const SatisticsContainer = styled.div`
     margin: 0 30px;
 
 `; 
+const HeadingStatic = styled.div`
+    font-size: 16px;
+    color: #000;
+`;
 const DateButton = styled.button`
     border-radius: 20px;
     width: 114px;
@@ -266,16 +272,33 @@ const Box = styled.div`
     border-radius: 5px;
 `; 
 const ArrowIconStatic = styled.div`
-      width: 10px;
+      width: 11px;
     img {
         display: block;
         width: 10px;
     }
 `;
 const Income = styled.div``; 
-const IncomAmount = styled.div``; 
-const Change = styled.div``; 
-const Variation = styled.div``; 
-const Percentage = styled.div``; 
+const LabelStatic = styled.span`
+    font-size: 10px;
+    color: #747474;
+`;
+const IncomAmount = styled.h3`
+    font-size: 12px;
+`; 
+const Change = styled.div`
+    background: #000;
+    width: 200px;
+    height: 20px;
+    margin-top: 20px;
+`; 
+const Variation = styled.div`
+    background: #000;
+    width: 200px;
+`; 
+const Percentage = styled.h6`
+    font-size: 11px;
+    color: #000;
+`; 
 
 export default MainDash;
