@@ -43,6 +43,72 @@ function Graph() {
                 </ChartImageContainer>
             </Bottom>
         </Chart>
+        <Transaction>
+            <TransactionContainer>
+                <TopContainer>
+                    <HeadingTransaction>Transaction</HeadingTransaction>
+                    <DateButton>
+                        march 2022
+                        <ArrowIcon>
+                            <img src={Down} alt="" />
+                        </ArrowIcon>
+                    </DateButton>
+                </TopContainer>
+                <BottomContainerTransaction>
+                    <TransactionItem>
+                        <Box>
+                            <ArrowIconStatic>
+                                <img src={Downarrow} alt="" />
+                            </ArrowIconStatic>
+                        </Box>
+                        <Income>
+                            <LabelStatic>Total income </LabelStatic>
+                            <IncomAmount>$235</IncomAmount>
+                        </Income>
+                        <TimeChange>
+                            <TransactionName>Monthly Groceries</TransactionName>
+                            <DateLabel>3 Apr 2022 at 3.15 PM</DateLabel>
+                        </TimeChange>
+                        <Percentage>+$2,20</Percentage>
+                        <Dot>
+                            <img src="" alt="" />
+                        </Dot>
+                    </TransactionItem>
+                    <TransactionItem>
+                        <Box>
+                            <ArrowIconStatic>
+                                <img src={Uparrow} alt="" />
+                            </ArrowIconStatic>
+                        </Box>
+                        <Income>
+                            <LabelStatic>Total income </LabelStatic>
+                            <IncomAmount>$235</IncomAmount>
+                        </Income>
+                        <TimeChange>
+                            <TransactionName>Zabka Cashback</TransactionName>
+                            <DateLabel>3 Apr 2022 at 3.15 PM</DateLabel>
+                        </TimeChange>
+                        <Percentage>+$220</Percentage>
+                    </TransactionItem>
+                    <TransactionItem>
+                        <Box>
+                            <ArrowIconStatic>
+                                <img src={Uparrow} alt="" />
+                            </ArrowIconStatic>
+                        </Box>
+                        <Income>
+                            <LabelStatic>Total income </LabelStatic>
+                            <IncomAmount>$235</IncomAmount>
+                        </Income>
+                        <TimeChange>
+                            <TransactionName>Transfer to card</TransactionName>
+                            <DateLabel>3 Apr 2022 at 3.15 PM</DateLabel>
+                        </TimeChange>
+                        <Percentage>--18%</Percentage>
+                    </TransactionItem>
+                </BottomContainerTransaction>
+            </TransactionContainer>
+        </Transaction>
     </GraphContainer>
   )
 }
@@ -136,6 +202,79 @@ const ChartImageContainer = styled.div`
         width: 100%;
     }
 `;
+const Transaction = styled.div`
+    width: 470px;
+    margin: -32px auto;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+`; 
+const TransactionContainer = styled.div`
+    margin: 0 30px;
+`; 
+const TopContainer = styled.div``;
+const HeadingTransaction = styled.div`
+    font-size: 16px;
+    color: #000;
+`;
+const DateButton = styled.button`
+    border-radius: 20px;
+    width: 114px;
+    height: 34px;
+    border: 1px solid #747474;
+    padding: 5px 12px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:20px;
+`; 
 
+const ArrowIcon = styled.span`
+    width: 10px;
+    img {
+        display: block;
+        width: 10px;
+    }
+`; 
+const StaticItem = styled.div`
+    display: flex;
+    justify-content: space-between;
+`; 
+const Box = styled.div`
+    background: #000;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+`; 
+const ArrowIconStatic = styled.div`
+      width: 11px;
+    img {
+        display: block;
+        width: 10px;
+    }
+`;
+const Income = styled.div``; 
+const LabelStatic = styled.span`
+    font-size: 10px;
+    color: #747474;
+`;
+const IncomAmount = styled.h3`
+    font-size: 12px;
+`; 
+const Change = styled.div`
+    background: #000;
+    width: 200px;
+    height: 20px;
+    margin-top: 20px;
+`; 
+const Variation = styled.div`
+    background: #000;
+    width: 200px;
+`; 
+const Percentage = styled.h6`
+    font-size: 11px;
+    color: #000;
+`; 
 
 export default Graph

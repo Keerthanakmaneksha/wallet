@@ -113,10 +113,6 @@ function MainDash() {
                             <LabelStatic>Total income </LabelStatic>
                             <IncomAmount>$235</IncomAmount>
                         </Income>
-                        <Change>
-                            <Variation></Variation>
-                        </Change>
-                        <Percentage>-18%</Percentage>
                     </StaticItem>
                 </BottomContainerStatic>
             </SatisticsContainer>
