@@ -3,6 +3,9 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import Search from "../../../assets/images/search.svg"
 import Graphh from "../../../assets/images/graph.png"
+import Down from "../../../assets/images/down.svg"
+import Uparrow from "../../../assets/images/uparrow.svg"
+import Downarrow from "../../../assets/images/downarrow.svg"
 
 function Graph() {
 
@@ -57,12 +60,12 @@ function Graph() {
                 <BottomContainerTransaction>
                     <TransactionItem>
                         <Box>
-                            <ArrowIconStatic>
+                            <ArrowIconTransaction>
                                 <img src={Downarrow} alt="" />
-                            </ArrowIconStatic>
+                            </ArrowIconTransaction>
                         </Box>
                         <Income>
-                            <LabelStatic>Total income </LabelStatic>
+                            <LabelTransaction>Total income </LabelTransaction>
                             <IncomAmount>$235</IncomAmount>
                         </Income>
                         <TimeChange>
@@ -76,12 +79,12 @@ function Graph() {
                     </TransactionItem>
                     <TransactionItem>
                         <Box>
-                            <ArrowIconStatic>
+                            <ArrowIconTransaction>
                                 <img src={Uparrow} alt="" />
-                            </ArrowIconStatic>
+                            </ArrowIconTransaction>
                         </Box>
                         <Income>
-                            <LabelStatic>Total income </LabelStatic>
+                            <LabelTransaction>Total income </LabelTransaction>
                             <IncomAmount>$235</IncomAmount>
                         </Income>
                         <TimeChange>
@@ -92,12 +95,12 @@ function Graph() {
                     </TransactionItem>
                     <TransactionItem>
                         <Box>
-                            <ArrowIconStatic>
+                            <ArrowIconTransaction>
                                 <img src={Uparrow} alt="" />
-                            </ArrowIconStatic>
+                            </ArrowIconTransaction>
                         </Box>
                         <Income>
-                            <LabelStatic>Total income </LabelStatic>
+                            <LabelTransaction>Total income </LabelTransaction>
                             <IncomAmount>$235</IncomAmount>
                         </Income>
                         <TimeChange>
@@ -204,16 +207,20 @@ const ChartImageContainer = styled.div`
 `;
 const Transaction = styled.div`
     width: 470px;
-    margin: -32px auto;
+    margin: 25px auto;
     box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
 `; 
 const TransactionContainer = styled.div`
     margin: 0 30px;
 `; 
-const TopContainer = styled.div``;
+const TopContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
 const HeadingTransaction = styled.div`
     font-size: 16px;
     color: #000;
+    margin-top: 20px;
 `;
 const DateButton = styled.button`
     border-radius: 20px;
@@ -234,7 +241,10 @@ const ArrowIcon = styled.span`
         width: 10px;
     }
 `; 
-const StaticItem = styled.div`
+const BottomContainerTransaction= styled.div`
+
+`;
+const TransactionItem = styled.div`
     display: flex;
     justify-content: space-between;
 `; 
@@ -247,7 +257,7 @@ const Box = styled.div`
     align-items: center;
     border-radius: 5px;
 `; 
-const ArrowIconStatic = styled.div`
+const ArrowIconTransaction = styled.div`
       width: 11px;
     img {
         display: block;
@@ -255,23 +265,26 @@ const ArrowIconStatic = styled.div`
     }
 `;
 const Income = styled.div``; 
-const LabelStatic = styled.span`
+const LabelTransaction = styled.span`
     font-size: 10px;
     color: #747474;
 `;
 const IncomAmount = styled.h3`
     font-size: 12px;
 `; 
-const Change = styled.div`
-    background: #000;
-    width: 200px;
-    height: 20px;
-    margin-top: 20px;
-`; 
-const Variation = styled.div`
-    background: #000;
-    width: 200px;
-`; 
+const TimeChange = styled.div`
+
+`;
+const TransactionName = styled.div`
+
+`;
+const DateLabel = styled.div`
+
+`;
+const Dot = styled.div`
+
+`;
+
 const Percentage = styled.h6`
     font-size: 11px;
     color: #000;
