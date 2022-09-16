@@ -6,6 +6,8 @@ import Graphh from "../../../assets/images/graph.png"
 import Down from "../../../assets/images/down.svg"
 import Uparrow from "../../../assets/images/uparrow.svg"
 import Downarrow from "../../../assets/images/downarrow.svg"
+import Dott from "../../../assets/images/dot.svg"
+
 
 function Graph() {
 
@@ -22,7 +24,6 @@ function Graph() {
                   {  isActive ? (<img src={Search} sizes={16} alt="" />  ):(
                     <img src={Search} size={22} alt="" />
                     )}
-    
             </SearchIconButton>
             <SearchInput />
         </SearchContainer>
@@ -31,11 +32,11 @@ function Graph() {
                 <ChartHeading>Analytics</ChartHeading>
                 <Right>
                     <RightItem>
-                        <ColorBox></ColorBox> 
+                        <ColorBoxBlack></ColorBoxBlack> 
                         <Attribute>Income</Attribute>
                     </RightItem>
                     <RightItem>
-                        <ColorBox></ColorBox> 
+                        <ColorBoxGreen></ColorBoxGreen> 
                         <Attribute>Saving</Attribute>
                     </RightItem>
                 </Right>
@@ -64,17 +65,13 @@ function Graph() {
                                 <img src={Downarrow} alt="" />
                             </ArrowIconTransaction>
                         </Box>
-                        <Income>
-                            <LabelTransaction>Total income </LabelTransaction>
-                            <IncomAmount>$235</IncomAmount>
-                        </Income>
                         <TimeChange>
                             <TransactionName>Monthly Groceries</TransactionName>
                             <DateLabel>3 Apr 2022 at 3.15 PM</DateLabel>
                         </TimeChange>
                         <Percentage>+$2,20</Percentage>
                         <Dot>
-                            <img src="" alt="" />
+                            <img src={Dott} alt="" />
                         </Dot>
                     </TransactionItem>
                     <TransactionItem>
@@ -83,15 +80,14 @@ function Graph() {
                                 <img src={Uparrow} alt="" />
                             </ArrowIconTransaction>
                         </Box>
-                        <Income>
-                            <LabelTransaction>Total income </LabelTransaction>
-                            <IncomAmount>$235</IncomAmount>
-                        </Income>
                         <TimeChange>
                             <TransactionName>Zabka Cashback</TransactionName>
                             <DateLabel>3 Apr 2022 at 3.15 PM</DateLabel>
                         </TimeChange>
-                        <Percentage>+$220</Percentage>
+                        <PercentageRed>+$220</PercentageRed>
+                        <Dot>
+                            <img src={Dott} alt="" />
+                        </Dot>
                     </TransactionItem>
                     <TransactionItem>
                         <Box>
@@ -99,15 +95,14 @@ function Graph() {
                                 <img src={Uparrow} alt="" />
                             </ArrowIconTransaction>
                         </Box>
-                        <Income>
-                            <LabelTransaction>Total income </LabelTransaction>
-                            <IncomAmount>$235</IncomAmount>
-                        </Income>
                         <TimeChange>
                             <TransactionName>Transfer to card</TransactionName>
                             <DateLabel>3 Apr 2022 at 3.15 PM</DateLabel>
                         </TimeChange>
-                        <Percentage>--18%</Percentage>
+                        <Percentage>+$80</Percentage>
+                        <Dot>
+                            <img src={Dott} alt="" />
+                        </Dot>
                     </TransactionItem>
                 </BottomContainerTransaction>
             </TransactionContainer>
@@ -121,7 +116,7 @@ const GraphContainer = styled.div`
 `;
 const SearchContainer = styled.div`
     position: relative;
-    width: ${(props) => (props.isSearching ? 360 : 340)}px;
+    width: ${(props) => (props.isSearching ? 360 : 320)}px;
     height: 48px;
     border-radius: 5px;
     display: flex;
@@ -129,7 +124,8 @@ const SearchContainer = styled.div`
     justify-content: space-between;
     padding-left: 5px;
     transition: all 0.3s ease; 
-    margin: 0 auto;
+    width: 400px;
+    margin-left: 20px;
 `;
 const SearchIconButton = styled.button`
     width: 33px;
@@ -183,10 +179,16 @@ const RightItem = styled.div`
     justify-content: space-between;
     align-content: center;
 `;
-const ColorBox = styled.div`
+const ColorBoxBlack = styled.div`
     width: 10px;
     height: 10px;
-    background: red;
+    background: #0c0a0b;
+    margin-right: 10px;
+`;
+const ColorBoxGreen = styled.div`
+    width: 10px;
+    height: 10px;
+    background: #5a9562;
     margin-right: 10px;
 `;
 const Attribute = styled.span`
@@ -206,8 +208,8 @@ const ChartImageContainer = styled.div`
     }
 `;
 const Transaction = styled.div`
-    width: 470px;
-    margin: 25px auto;
+    width: 413px;
+    margin: 10px auto;
     box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
 `; 
 const TransactionContainer = styled.div`
@@ -256,6 +258,7 @@ const Box = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    margin-top: 20px;
 `; 
 const ArrowIconTransaction = styled.div`
       width: 11px;
@@ -264,30 +267,37 @@ const ArrowIconTransaction = styled.div`
         width: 10px;
     }
 `;
-const Income = styled.div``; 
-const LabelTransaction = styled.span`
-    font-size: 10px;
-    color: #747474;
-`;
-const IncomAmount = styled.h3`
-    font-size: 12px;
-`; 
+
 const TimeChange = styled.div`
-
+    
 `;
-const TransactionName = styled.div`
-
+const TransactionName = styled.h4`
+   font-size: 14px;
+   color:#000 ;
+   font-weight: 400;
+   margin-bottom: 4PX;
 `;
-const DateLabel = styled.div`
-
+const DateLabel = styled.span`
+    font-size: 11px;
+    color:#747474 ;
 `;
 const Dot = styled.div`
-
+    width: 15px;
+    margin-top: 20px;
+    img {
+        display: block;
+        width: 100%;
+    }
 `;
 
 const Percentage = styled.h6`
     font-size: 11px;
-    color: #000;
+    color: #75cd68;
 `; 
+const PercentageRed = styled.h6`
+    font-size: 11px;
+    color: #e83737;
+`; 
+
 
 export default Graph

@@ -7,6 +7,7 @@ import Game from "../../../assets/images/game.svg"
 import Down from "../../../assets/images/down.svg"
 import Uparrow from "../../../assets/images/uparrow.svg"
 import Downarrow from "../../../assets/images/downarrow.svg"
+import Bargraph from "../../../assets/images/graph1.png"
 
 
 function MainDash() {
@@ -84,7 +85,7 @@ function MainDash() {
                             <IncomAmount>$235</IncomAmount>
                         </Income>
                         <Change>
-                            <Variation></Variation>
+                            <VariationBlue></VariationBlue>
                         </Change>
                         <Percentage>+20%</Percentage>
                     </StaticItem>
@@ -99,7 +100,7 @@ function MainDash() {
                             <IncomAmount>$235</IncomAmount>
                         </Income>
                         <Change>
-                            <Variation></Variation>
+                            <VariationAqua></VariationAqua>
                         </Change>
                         <Percentage>+8%</Percentage>
                     </StaticItem>
@@ -114,7 +115,7 @@ function MainDash() {
                             <IncomAmount>$235</IncomAmount>
                         </Income>
                         <Change>
-                            <Variation></Variation>
+                            <VariationPeach></VariationPeach>
                         </Change>
                         <Percentage>+8%</Percentage>
                     </StaticItem>
@@ -146,6 +147,11 @@ const CardContainer = styled.ul`
 const CardItem = styled.li`
     list-style: none;
     width: 35%;
+    margin: 0 auto;
+    border-right: 1px solid #fff;
+    :last-child {
+        border-right: none;
+    }
 `; 
 const Label = styled.h5`
     color: #eeeeee;
@@ -287,14 +293,28 @@ const IncomAmount = styled.h3`
     font-size: 12px;
 `; 
 const Change = styled.div`
-    background: #000;
     width: 200px;
     height: 20px;
     margin-top: 20px;
+    background-image:url(${Bargraph});
 `; 
-const Variation = styled.div`
-    background: #000;
-    width: 200px;
+const VariationBlue = styled.div`
+    background-color:  #FEC0A7;
+    width: 100px;
+    height: 20px;
+    border-radius: 2px;
+`; 
+const VariationAqua = styled.div`
+    background-color: #98BDE5;
+    width: 50px;
+    height: 20px;
+    border-radius: 2px;
+`; 
+const VariationPeach = styled.div`
+    background-color: #98DBE5;
+    width: 80px;
+    height: 20px;
+    border-radius: 2px;
 `; 
 const Percentage = styled.h6`
     font-size: 11px;
