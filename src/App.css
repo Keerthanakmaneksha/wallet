@@ -29,11 +29,12 @@
   color: white;
 }
 .container {
-  display: grid;
+ display: grid; 
   height: 100%;
   width: 100%;
-  grid-template-columns: 220px auto 500px;
-  
+  /* display: flex;
+  flex-wrap: wrap; */
+   grid-template-columns: 220px auto 500px;
 }
 
 .App-link {

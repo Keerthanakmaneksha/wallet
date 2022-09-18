@@ -69,7 +69,8 @@ function SideBar() {
 const SidebarContainer = styled.div`
     padding-top: 15px 15px;
     background: #f1f1f1;
-    height: 100vh;
+    height: 100%;
+    width: 220px; 
 `;
 const LogoContainer = styled.div`
     width: 200px;
@@ -82,6 +83,7 @@ const LogoContainer = styled.div`
 `;
 const MenuContainer = styled.div`
     margin-top:50px;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     margin-left: 25px;
