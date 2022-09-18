@@ -32,6 +32,7 @@ const CardContainer = styled.ul`
     display: flex;
     border: 1px solid #000;
     border-radius: 10px;
+
 `; 
 const CardItem = styled.li`
     list-style: none;
