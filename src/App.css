@@ -1,6 +1,35 @@
+@font-face {
+  font-family: "ibm_plex_sans_thai_loopedLt";
+  src: url("../src/assets/fonts/ibmplexsansthailooped-light-webfont.woff2")
+      format("woff2"),
+    url("../src/assets/fonts/ibmplexsansthailooped-light-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ibm_plex_sans_thai_loopedMd";
+  src: url("../src/assets/fonts/ibmplexsansthailooped-medium-webfont.woff2")
+      format("woff2"),
+    url("../src/assets/fonts/ibmplexsansthailooped-medium-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+select{
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  background:rgb(238, 234, 234);
+  color:#000;
+  border-radius: 10px;
+  border: 1px solid grey;
+  margin-top: 30px;
+}
 .App {
   text-align: center;
-  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -29,12 +58,6 @@
   color: white;
 }
 .container {
- display: grid; 
-  height: 100%;
-  width: 100%;
-  /* display: flex;
-  flex-wrap: wrap; */
-   grid-template-columns: 220px auto 500px;
 }
 
 .App-link {
